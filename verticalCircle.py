@@ -41,7 +41,6 @@ from subprocess import call
 #  and its visualization. The numerical calculation of the motion and the visualization
 #  are seperated in different loops in order to get a lower runtime in the visualization loop.
   
-#  René Jursa
 
 def dotProd(ax,ay,az,bx,by,bz):
     dp = ax*bx + ay*by + az*bz
