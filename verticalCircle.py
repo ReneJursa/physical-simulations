@@ -7,7 +7,7 @@
 
 # The above copyright notice and this permission notice shall be included in
 # all copies or substantial portions of the Software.
-#
+
 # THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 # ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
 # WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
@@ -26,8 +26,6 @@ from numpy import linspace, zeros, exp, asarray, pi, cos, sin
 import matplotlib.pyplot as plt
 from visual import *
 from visual.graph import *
-from PIL import ImageGrab   
-from subprocess import call 
 
 #  This programm simulates the motion of an object in a vertical circular rail.
 #  The circular rail is represented by the curve of a three dimensional function
@@ -563,15 +561,6 @@ scene = display(title='motion of an object in a vertical circle',
 scene.background = color.gray(0.3)
 scene.ambient = color.gray(0.8)
 
-thickness = 0.01
-height = 0.025
-width = 0.2
-R_i = R - width/2.0
-R_o = R + width/2.0
-sl = arange( 0.0, 0.5*R*2.0*np.pi, 0.01 )
-sl_i = arange( 0.0, 10.0*R_i*2.0*np.pi, 0.01 )
-sl_o = arange( 0.0, 10.0*R_o*2.0*np.pi, 0.01 )
-
 curvx = zeros(n_max)
 curvy = zeros(n_max)
 curvz = zeros(n_max)
@@ -623,6 +612,7 @@ fz2A_sn = fz_2A(sc[0],R,omega,b)
 L = 0.5
 H = 0.5
 W = 0.5
+height = 0.025
 uxp = ux[0] + (H/2 + height)*uTnx[0]
 uyp = uy[0] + (H/2 + height)*uTny[0]
 uzp = uz[0] + (H/2 + height)*uTnz[0]
