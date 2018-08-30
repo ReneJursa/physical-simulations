@@ -666,8 +666,6 @@ Atgraph = gdisplay(x=800, y=450, width=600, height=500,
 gAt = gcurve(color = color.blue)
 gAt.plot(pos=(t[0],a_abs[0]))
 
-ic, fnum = 0, 0     # counter, and file number
-
 starttime = time . time ()
 for n in range(n_max):                  # visualization loop
     rate(1000)
@@ -695,15 +693,6 @@ for n in range(n_max):                  # visualization loop
     block.velocity.y = vy[n]
     block.z = uzp
     block.velocity.z = vz[n]
-    
-    #if (fnum >= 1000): 
-    #    break
-    #elif (ic%50 == 0):      # grab every 50 iterations
-    #    im = ImageGrab.grab((0,0,1365,725))
-    #    num = '00'+repr(fnum)           # sequence num 000-00999, trunc. below
-    #    im.save('img-'+num[-3:]+'.png') # save to png file, 000-999, 3 digits
-    #    fnum += 1
-    #ic += 1
 
     tn = t[n]
     gEkin.plot(pos=(tn,Ekin[n]))
@@ -750,6 +739,6 @@ print("zeitlicher Mittelwert der Reibungskraft FR: {0:10.9}N".format(mean_FR))
 print("max Betrag von FR: {0:10.9}N zur Zeit {1:9.7}s bei s={2:9.7}m mit der Geschwindigkeit v={3:9.7}m/s"
       .format(max_friction_force,t[n_max_fr],x_max_fr,v_max_fr)) 
 
-#call("ffmpeg -r 20 -i img-%3d.png -vcodec libx264 -vf format=yuv420p,scale=1150:600 -y movie.mp4")
+
 
 
