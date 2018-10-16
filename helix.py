@@ -673,7 +673,6 @@ difftime = endtime - starttime
 print("Rechenzeit für Visualisierung der Bewegung: {0:10.8}s".format(difftime))
 
 n = n_max
-print("Winkel der Bahn zur Horizontalen: {0:6.4}°".format(ang_track[n_max-1]))    
 print("max n: {0} Endzeit t={1:6.5}s x={2:10.9}m, y={3:10.9}m und z={4:10.9}m".format(n,t[n],ux[n],uy[n],uz[n]))
 print("Geschwindigkeit vx={0:10.9}m/s, vy={1:10.9}m/s vz={2:10.9}m/s und v={3:10.9}m/s".format(vx[n],vy[n],vz[n],vabs[n]))
 print("Beschleunigung ax={0:10.9}m/s², ay={1:10.9}m/s² az={2:10.9}m/s² und a={3:10.9}m/s²".format(ax[n],ay[n],az[n],a_abs[n]))
